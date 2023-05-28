@@ -29,9 +29,72 @@
 list_letter = {
     1: 'AEIOULNSTRАВЕИНОРСТ',
     2: 'DGДКЛМПУ',
-    3: 'BCMP',
-    4: '',
-    5: '',
-    8: '',
-    10: ''
+    3: 'BCMPБГЁЬЯ',
+    4: 'FHVWYЙЫ',
+    5: 'KЖЗХЦЧ',
+    8: 'JXШЭЮ',
+    10: 'QZФЩЪ'
 }
+
+name_one = input("Первый игрок! Представьтесь, как вас зовут? ")
+name_two = input("Второй игрок! Представьтесь, а как зовут вас? ")
+print(name_one, "=)))")
+letter1 = input("Введите своё слово: ").upper()
+result1 = 0
+print(name_two, "=)))")
+letter2 = input("Теперь вы введите своё слово: ").upper()
+result2 = 0
+
+for i in letter1:
+    for k, v in list_letter.items():
+        if i in v:
+            result1 += k
+
+for i in letter2:
+    for k, v in list_letter.items():
+        if i in v:
+            result2 += k
+
+if result1 > result2:
+    print("Выйграл", name_one, "!!!, так как ", name_two, " имеет ", result1, " очков, а ", name_two, " имеет ", result2, " очков")
+elif result1 < result2:
+    print("Выйграл ", name_two, "!!!, так как", name_one, " имеет ", result1, " очков, а ", name_two, " имеет ", result2, " очков")
+elif result1 == result2:
+    print("Победила ничья!!!")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# word = input("Введите слово: ").upper()
+# summa = 0
+# for i in word:
+#     for k, v in list_letter.items():
+#         if i in v:
+#             summa += k
+
+# print("У вас ", summa, " очков!")
+
+# letter_input = input("Введите слово: ").upper()
+# letter = []
+# result = 0
+
+# for i in letter_input:
+#     letter.append(i)
+
+# for i in letter:
+#     if i == list_letter
