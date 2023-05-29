@@ -8,19 +8,21 @@
 #     1 2 3 4 5
 #     3
 #     -> 1
-number = int(input("Введите число: "))
+number = int(input("Введите количество элементов в массиве: "))
 
-list_1 = []
+list_number = []
 
-for i in range(1, number + 1, 1):
-    list_1.append(i)
+for i in range(number):
+    num = int(input("Введите число: "))
+    list_number.append(num)
 
-print(*list_1)
+print("Полученный массив: ", *list_number)
 
-number2 = int(input("Введите число, а я проверю сколько раз оно встречается в данном массиве: "))
+find_number = int(input("Введите число, а я посчитаю сколько раз оно встречается в этом массиве: "))
 count = 0
-for i in list_1:
-    if number2 == i:
+
+for i in list_number:
+    if i == find_number:
         count += 1
 
-print("Данное число встречается ", count, "раз" )
+print("Данное число встречается ", count, " раз")
