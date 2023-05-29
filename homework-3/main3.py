@@ -56,7 +56,7 @@ for i in letter2:
             result2 += k
 
 if result1 > result2:
-    print("Выйграл", name_one, "!!!, так как ", name_two, " имеет ", result1, " очков, а ", name_two, " имеет ", result2, " очков")
+    print("Выйграл", name_one, "!!!, так как ", name_one, " имеет ", result1, " очков, а ", name_two, " имеет ", result2, " очков")
 elif result1 < result2:
     print("Выйграл ", name_two, "!!!, так как", name_one, " имеет ", result1, " очков, а ", name_two, " имеет ", result2, " очков")
 elif result1 == result2:
